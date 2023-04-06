@@ -42,8 +42,16 @@ const test3 = map(names, function(name) {
   return name.length;
 });
 
+const people = [
+  { name: "William", age: 25 },
+  { name: "Janet", age: 41 },
+  { name: "Henry", age: 3 }
+];
+const test4 = map(people, function(person) {
+    return person.age;
+})
+
 console.log(assertArraysEqual(test1, [2, 4, 6, 8, 10]));
 console.log(assertArraysEqual(test2, ["hello"]));
 console.log(assertArraysEqual(test3, [5, 5, 7, 8]));
-
-
+console.log(assertArraysEqual(test4, [25, 41, 3]));
