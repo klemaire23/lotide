@@ -9,14 +9,6 @@ const eqArrays = function(arr1, arr2) {
   return true;
 };
 
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    return `✅✅✅ Assertion Passed: ${actual} === ${expected}`;
-  } else {
-    return `🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`;
-  }
-};
-
 const eqObjects = function(object1, object2) {
   let objectKeys1 = Object.keys(object1);
   let objectKeys2 = Object.keys(object2);
@@ -43,7 +35,7 @@ const assertObjectsEqual = function(actual, expected) {
     return (`🛑🛑🛑 Assertion Failed: ${inspect(actual)} !== ${inspect(expected)}`);
   }
 
-    return (`✅✅✅ Assertion Passed: ${inspect(actual)} === ${inspect(expected)}`)
+  return (`✅✅✅ Assertion Passed: ${inspect(actual)} === ${inspect(expected)}`);
 };
 
 const shirtObject = { color: "red", size: "medium" };
