@@ -1,10 +1,12 @@
 const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    return `✅✅✅ Assertion Passed: ${actual} === ${expected}`;
-  } else {
-    return `🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`;
+  if (actual !== expected) {
+    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
+    return;
   }
+  
+  console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
 };
+
 // console.log(assertEqual("You did it!", "You did it!"));
 // console.log(assertEqual(16, 26));
 
@@ -25,15 +27,21 @@ const firstNames = [
 
 const countOnly = function(allItems, itemsToCount) {
   const results = {};
+
   for (const item of allItems) {
-    if (itemsToCount[item]) {
-      if (results[item]) {
-        results[item] += 1;
-      } else {
-        results[item] = 1;
-      }
+    
+    if (!itemsToCount[item]) {
+
+      continue;
     }
-  }
+
+      if (!results[item]) {
+        results[item] = 0;
+      } 
+        results[item] += 1;
+        
+      }
+
   return results;
 };
 
