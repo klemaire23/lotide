@@ -57,3 +57,4 @@ const anotherMultiColorShirtObject2 = { size: "medium", colors: ["red", "blue", 
 
 const anotherMultiColorShirtObject3 = { size: "small", colors: ["red", "blue"] };
 console.log(assertEqual(eqObjects(multiColorShirtObject, anotherMultiColorShirtObject3), false));
+

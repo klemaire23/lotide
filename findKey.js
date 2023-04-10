@@ -36,3 +36,5 @@ const people = {
 };
 const results2 = findKey(people, x => x.age === 26);
 console.log(assertEqual(results2, "Sarah"));
+
+
